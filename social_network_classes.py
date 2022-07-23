@@ -1,15 +1,15 @@
 class SocialNetwork:
     def __init__(this):
-        this.peopleList = [] 
+        this.personList = [] 
         
-    def save_social_media(this):
+    def saveSocialMedia(this):
         pass
 
-    def reload_social_media(this):
+    def reloadSocialMedia(this):
         pass
 
-    def  create_account(this, person):
-        this.peopleList.append(person)
+    def  createAccount(this, person):
+        this.personList.append(person)
 
 
 class Person:
@@ -31,5 +31,8 @@ class Person:
         this.blockList.append(person)
     
     def sendMessage(this, person, content):
+        if this in person.blockList:
+            return person.name + "has blocked you! The message cannot be sent."
         message = "{0}: {1}".format(this.name, content)
         person.messageList.append(message)
+        return "Message successfully sent."

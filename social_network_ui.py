@@ -5,8 +5,8 @@ def mainMenu():
     print("1. Create a new account")
     print("2. Manage my account")
     print("3. Quit")
-    print("********************************************************")
-    return input("Please Choose a number: ")
+    print("")
+    return input("Please choose a number: ")
 
 def manageAccountMenu():
     print("")
@@ -14,5 +14,6 @@ def manageAccountMenu():
     print("2. Add a friend")
     print("3. View all my friends")
     print("4. View all my messages")
-    print("5. <- Go back ")
-    return input("Please Choose a number: ")
+    print("5. <- Go back")
+    print("")
+    return input("Please choose a number: ")
