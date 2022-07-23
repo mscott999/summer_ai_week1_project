@@ -1,38 +1,35 @@
-# A class to hold general system wide social media data and functions. Eg Data objects of all people, Eg functions: Save social media to disk
 class SocialNetwork:
-    def __init__(self):
-        self.list_of_people = [] # this instance variable is initialized to an empty list when social network is created, 
-                                 # you can save objects of people on the network in this list
+    def __init__(this):
+        this.peopleList = [] 
         
-    ## For more challenge try this
-    def save_social_media(self):
-        # function to save social media to a file on disk 
-        # hint: look up how to use python's inbuil json module to turn objects to json
-        # you can write this json unto a file on disk
+    def save_social_media(this):
         pass
 
-    ## For more challenge try this
-    def reload_social_media(self):
-        # function to load saved social media from file on disk 
-        # hint: load a the json file from disk and look up how to recreate the list of people objects.
+    def reload_social_media(this):
         pass
 
-    def  create_account(self):
-        #implement function that creates account here
-        print("Creating ...")
-        pass
+    def  create_account(this, person):
+        this.peopleList.append(person)
 
 
 class Person:
-    def __init__(self, name, age):
-        self.id = name
-        self.year = age
-        self.friendlist = []
+    def __init__(this, name, age):
+        this.name = name
+        this.age = age
+        this.friendList = []
+        this.blockList = []
+        this.messageList = []
 
-    def add_friend(self, person_object):
-        #implement adding friend. Hint add to self.friendlist
-        pass
-
-    def send_message(self):
-        #implement sending message to friend here
-        pass
+    def editDetails(this, name, age):
+        this.name = name
+        this.age = age
+    
+    def addFriend(this, person):
+        this.friendList.append(person)
+    
+    def blockPerson(this, person):
+        this.blockList.append(person)
+    
+    def sendMessage(this, person, content):
+        message = "{0}: {1}".format(this.name, content)
+        person.messageList.append(message)
