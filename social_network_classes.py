@@ -1,16 +1,17 @@
+import json
+
 class SocialNetwork:
     def __init__(this):
         this.personList = [] 
         
     def saveSocialMedia(this):
         pass
-
+    
     def reloadSocialMedia(this):
         pass
 
-    def  createAccount(this, person):
+    def createAccount(this, person):
         this.personList.append(person)
-
 
 class Person:
     def __init__(this, name, age):

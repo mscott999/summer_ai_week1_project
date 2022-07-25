@@ -1,5 +1,3 @@
-# You can implement user interface functions here.
-
 def mainMenu():
     print("")
     print("1. Create a new account")

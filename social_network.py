@@ -177,6 +177,7 @@ while (True):
 
     #3a. Quit.
     elif (choice == "3"):
+        socialNetwork.saveSocialMedia()
         print("\nHave a great day!")
         break
 
