@@ -1,6 +1,7 @@
 from  social_network_classes import SocialNetwork,Person
 import social_network_ui
 
+#Social Network for tracking all registered acounts.
 socialNetwork = SocialNetwork()
 
 while (True):
@@ -97,7 +98,7 @@ while (True):
                         print("")
                         print(friendTarget.name, "has successfully been added as a friend.")
 
-                #3b. View all my friends
+                #3b. View all my friends.
                 elif (choice2 == "3"):
                     if (len(signedInUser.friendList) == 0):
                         print("\nError: no friends have been added.")
@@ -106,7 +107,7 @@ while (True):
                         for friend in signedInUser.friendList:
                             print(friend.name)
 
-                #4b. Send message to friend
+                #4b. Send message to friend.
                 elif (choice2 == "4"):
                     if (len(signedInUser.friendList) == 0):
                         print("\nError: no friends have been added.")
@@ -143,7 +144,7 @@ while (True):
                         for message in signedInUser.messageList:
                             print(message)
 
-                #6b. Block another account
+                #6b. Block another account.
                 elif (choice2 == "6"):
                     if (len(socialNetwork.personList) < 2):
                         print("\nError: no other registered accounts.")

@@ -1,3 +1,4 @@
+#UI to represent the main menu that appears at runtime.
 def mainMenu():
     print("")
     print("1. Create a new account")
@@ -6,6 +7,7 @@ def mainMenu():
     print("")
     return input("Please choose a number: ")
 
+#UI to represent specific actions a user can perform after signing in.
 def manageAccountMenu():
     print("")
     print("1. Edit my details")
